@@ -216,12 +216,18 @@ input, select, textarea {
 /* Responsive image */
 
 .responsive-image {
-    width: 250px;  /* Make the image adjust to container width */
+    width: 100%;  /* Make the image adjust to container width */
     height: auto; /* Maintain aspect ratio */
+	height: 200px; /* Set a fixed height for the image */
+  	object-fit: cover;  /* Scale the image to cover the container */
     max-width: 500px; /* Optional max size */
     display: block; /* Remove extra spacing */
     margin: auto; /* Centering */
+  	cursor: pointer;
 }
+.responsive-image:hover {
+	transform: scale(1.05); /* Optional zoom effect */
+  }
 
 .responsive-logo {
     width: 100%;  /* Make the image adjust to container width */
@@ -1640,6 +1646,7 @@ input, select, textarea {
 			left: 1.75em;
 			top: 1.75em;
 			margin: -4.5em 0 4.25em -3.5em;
+			
 		}
 
 		.box.post header {
